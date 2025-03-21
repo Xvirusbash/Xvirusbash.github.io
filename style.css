@@ -1,0 +1,297 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #FFF5B7;
+}
+
+.wrapper {
+  height: 340px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  margin: auto;
+  z-index: 2;
+  filter: drop-shadow(0 0 3px #333);
+}
+
+.wrapper .plant {
+  height: 150px;
+  width: 6px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  margin: auto;
+  background: #0aaf05;
+  z-index: 1;
+  transform-origin: center bottom;
+  animation: lean 3s 0.5s infinite;
+}
+.wrapper .plant .leaf__one {
+  height: 30px;
+  width: 30px;
+  background: #0aaf05;
+  position: relative;
+  top: 10px;
+  left: 6px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  transform: rotateZ(-67.5deg);
+  z-index: -2;
+}
+.wrapper .plant .leaf__two {
+  height: 26px;
+  width: 26px;
+  background: #0aaf05;
+  position: relative;
+  top: 12px;
+  right: 26px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  transform: rotateZ(67.5deg);
+}
+.wrapper .plant .leaf__three {
+  height: 24px;
+  width: 24px;
+  background: #0aaf05;
+  position: relative;
+  top: 22px;
+  left: 6px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  transform: rotateZ(-67.5deg);
+}
+.wrapper .plant .flower {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: -80px;
+  left: -40px;
+  animation: rotate 3s 0.5s infinite;
+}
+.wrapper .plant .flower::before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background: #ffff00;
+  border-radius: 100%;
+  z-index: -1;
+  box-shadow: -37px 15px #ffff00, -47px 54px #ffff00, -26px 89px #ffff00, 15px 93px #ffff00, 43px 63px #ffff00, 36px 21px #ffff00;
+}
+.wrapper .plant .flower .head {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  border-radius: 100%;
+  background: #E8AD17;
+  box-shadow: 0 0 3px #333;
+  z-index: 10;
+}
+.wrapper .plant .flower .head .face {
+  height: 26.6666666667px;
+  width: 26.6666666667px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: auto;
+  border: 4px transparent solid;
+  border-bottom: 4px black solid;
+  border-right: 4px black solid;
+  border-radius: 100%;
+  transform: rotate(45deg);
+  z-index: 10;
+}
+.wrapper .plant .flower .head .face::before, .wrapper .plant .flower .head .face::after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: -10px;
+  background: black;
+  border-radius: 100%;
+}
+.wrapper .plant .flower .head .face::before {
+  top: 8px;
+  left: -16px;
+}
+.wrapper .plant .flower .head .face::after {
+  top: -16px;
+  right: 8px;
+}
+.wrapper .pot {
+  height: 80px;
+  width: 60px;
+  background: #4D2319;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.wrapper .pot .top {
+  height: 20px;
+  width: 120px;
+  position: absolute;
+  left: -30px;
+  background: #431f16;
+  z-index: 2;
+}
+.wrapper .pot .top::after {
+  content: "";
+  height: 14px;
+  width: 120px;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  border: 0;
+  border-top: 14px #220F0B solid;
+  border-radius: 100%;
+}
+.wrapper .pot::before, .wrapper .pot::after {
+  content: "";
+  position: absolute;
+  border-color: #4D2319;
+  border-top-width: 40px;
+  border-right-width: 15px;
+  border-bottom-width: 40px;
+  border-left-width: 15px;
+  border-style: solid;
+  border-bottom-color: transparent;
+}
+.wrapper .pot::before {
+  left: -30px;
+  border-left-color: transparent;
+}
+.wrapper .pot::after {
+  right: -30px;
+  border-right-color: transparent;
+}
+.wrapper .text {
+  width: 360px;
+  position: absolute;
+  top: -60px;
+  left: -10px;
+  right: 0;
+  bottom: auto;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Indie Flower";
+}
+
+.whitespace {
+  height: 40px;
+  position: absolute;
+  bottom: -40px;
+}
+
+@keyframes lean {
+  0% {
+    transform: rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(-22.5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  62.5% {
+    transform: rotate(22.5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(22.5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  62.5% {
+    transform: rotate(-22.5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.download-section {
+  text-align: center;
+  margin-top: 485px;
+  position: relative;
+}
+
+.download-section a {
+  text-decoration: none;
+}
+
+.download-section button {
+  background-color: #fae2bf; 
+  color: #000; 
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-family: 'Indie Flower';
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-section button:hover {
+  background-color: #e5c8a0;
+  transform: scale(1.05);
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.gif-container img {
+  width: 400px;
+  height: 400px;
+  animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
